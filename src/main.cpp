@@ -103,6 +103,7 @@ void setup() {
     while (true) {}
   }
 
+  set_current_limit(20.0);
   enc.clear();
   pid.reset(0.0);
 
