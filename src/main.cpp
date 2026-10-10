@@ -8,17 +8,17 @@
 
 const uint32_t UART_BAUD = 115200;
 
-const uint8_t ENC_A_PIN = PA6;
-const uint8_t ENC_B_PIN = PA7;
-const uint8_t DEBUG_PIN = PA10;
-const uint8_t LAUNCH_PWM_PIN = PA8;
-const uint8_t LAUNCH_DIR_PIN = PB0;
-const uint8_t LOAD_PWM_PIN = PA9;
-const uint8_t LOAD_DIR_PIN = PA1;
-const uint8_t LIM_SW_PIN = PB4;
+const uint8_t ENC_A_PIN = PA6; // A5
+const uint8_t ENC_B_PIN = PA7; // A6
+const uint8_t DEBUG_PIN = PA10; // D0
+const uint8_t LAUNCH_PWM_PIN = PA8; // D9
+const uint8_t LAUNCH_DIR_PIN = PB7; // D4
+const uint8_t LOAD_PWM_PIN = PA9; // D1
+const uint8_t LOAD_DIR_PIN = PA1; // A1
+const uint8_t LIM_SW_PIN = PB4; // D12
 // メモ（裏で自動で動くのでこれらピンを操作する必要なし）
-// const uint8_t COMP_IN_PIN = PB0;
-// const uint8_t COMP_OUT_PIN = PB1;
+// const uint8_t COMP_IN_PIN = PB0; // D3
+// const uint8_t COMP_OUT_PIN = PB1; // D6
 
 const uint32_t ENC_CPR = 4096;
 const uint16_t CAN_TX_ID_TARGET_REACHED = 0x102;
@@ -103,7 +103,7 @@ void setup() {
     while (true) {}
   }
 
-  set_current_limit(20.0);
+  set_current_limit(1.0);
   enc.clear();
   pid.reset(0.0);
 
@@ -111,6 +111,8 @@ void setup() {
   prev_ms    = millis();
 }
 
+void loop() {}
+/*
 void loop() {
   can_receive_command();
   const unsigned long now_ms = millis();
@@ -167,3 +169,4 @@ void loop() {
     last_printed = millis();
   }
 }
+*/
