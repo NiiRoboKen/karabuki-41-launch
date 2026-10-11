@@ -4,7 +4,7 @@ extern "C" {
   #include "stm32f3xx_hal_can.h"
 }
 
-CAN_HandleTypeDef hcan;
+CAN_HandleTypeDef hcan = {};
 CAN_RxHeaderTypeDef rxHeader  = {};
 uint8_t rxData[8] = {0};
 

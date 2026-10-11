@@ -32,7 +32,7 @@ static void comp4_init() {
     hcomp4.Init.InvertingInput = COMP_INVERTINGINPUT_DAC1_CH2;
     hcomp4.Init.NonInvertingInput = COMP_NONINVERTINGINPUT_IO1;
     hcomp4.Init.Output = COMP_OUTPUT_NONE;
-    hcomp4.Init.OutputPol = COMP_OUTPUTPOL_NONINVERTED;
+    hcomp4.Init.OutputPol = COMP_OUTPUTPOL_INVERTED;
     hcomp4.Init.BlankingSrce = COMP_BLANKINGSRCE_NONE;
     hcomp4.Init.TriggerMode = COMP_TRIGGERMODE_NONE;
     if (HAL_COMP_Init(&hcomp4) != HAL_OK) { Error_Handler(); }

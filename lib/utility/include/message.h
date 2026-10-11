@@ -1,5 +1,5 @@
 #pragma once
-#include "peer_link.h"
+// #include "peer_link.h"
 #include <cstdint>
 
 enum class MessageType {
@@ -159,6 +159,6 @@ constexpr uint8_t CAN_CMD_LAUNCH_ROLLER = 0x22;
 constexpr uint8_t CAN_RESET = 0x30;
 
 constexpr uint8_t   WIFI_CHANNEL   = 14;
-constexpr peer_id_t SWERVE_S3_ID   = 0x10;
-constexpr peer_id_t TABLET_ESP_ID  = 0x11;
-constexpr peer_id_t Gamepad_ESP_ID = 0x12;
+// constexpr peer_id_t SWERVE_S3_ID   = 0x10;
+// constexpr peer_id_t TABLET_ESP_ID  = 0x11;
+// constexpr peer_id_t Gamepad_ESP_ID = 0x12;
